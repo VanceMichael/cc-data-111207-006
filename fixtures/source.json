@@ -1,0 +1,45 @@
+{
+  "pages": {
+    "/full": {
+      "value": [
+        {
+          "id": "shop-a",
+          "version": 1,
+          "name": "青禾店",
+          "phone": "100"
+        }
+      ],
+      "nextLink": "/page?token=opaque-x"
+    },
+    "/page?token=opaque-x": {
+      "value": [
+        {
+          "id": "shop-b",
+          "version": 1,
+          "name": "河湾店"
+        }
+      ],
+      "deltaLink": "/delta?token=delta-1"
+    },
+    "/delta?token=delta-1": {
+      "value": [
+        {
+          "id": "shop-a",
+          "version": 2,
+          "phone": null
+        },
+        {
+          "id": "shop-b",
+          "version": 2,
+          "removed": true
+        }
+      ],
+      "deltaLink": "/delta?token=delta-2"
+    },
+    "/delta?token=delta-2": {
+      "value": [],
+      "deltaLink": "/delta?token=delta-2"
+    }
+  },
+  "expired": "/delta?token=expired"
+}
